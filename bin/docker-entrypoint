@@ -1,0 +1,31 @@
+#!/bin/bash -e
+
+# Enable jemalloc for reduced memory usage and latency.
+if [ -z "${LD_PRELOAD+x}" ] && [ -f /usr/lib/*/libjemalloc.so.2 ]; then
+  export LD_PRELOAD="$(echo /usr/lib/*/libjemalloc.so.2)"
+fi
+
+echo '[ENTRYPOINT] Waiting for postgres...'
+until psql "$DATABASE_URL" -c '\q'; do
+  >&2 echo '[ENTRYPOINT] Postgres is unavailable - sleeping'
+  sleep 1
+done
+>&2 echo '[ENTRYPOINT] Postgres is up - executing command'
+
+echo '[ENTRYPOINT] Starting migrations...'
+bundle exec rails db:migrate 2>&1
+
+echo '[ENTRYPOINT] Generating swagger...'
+bundle exec rails rswag
+
+if [ "$1" ]; then
+  if [ "$1" = "rspec" ]; then
+    bundle exec rspec
+  else
+    echo "[ENTRYPOINT] Starting command: $1"
+    exec "$1"
+  fi
+else
+  rm -f tmp/pids/server.pid puma.pid
+  bundle exec rails s -b 0.0.0.0
+fi
