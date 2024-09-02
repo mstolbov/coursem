@@ -30,7 +30,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
 
   gem 'rspec', '~> 3.13'
-  gem 'rspec-rails', '~> 6.1', '>= 6.1.4'
+  gem 'rspec-rails', '~> 7.0'
   gem 'faker', '~> 3.4', '>= 3.4.2'
 
   gem 'rswag-specs', '~> 2.14'
