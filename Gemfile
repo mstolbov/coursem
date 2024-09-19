@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "~> 7.2.1"
 gem 'pg', '~> 1.5', '>= 1.5.7'
-gem 'puma', '~> 6.4', '>= 6.4.2'
+gem 'puma', '~> 6.4'
 gem 'ransack', '~> 4.2', '>= 4.2.1'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'active_model_serializers', '~> 0.10.14'
