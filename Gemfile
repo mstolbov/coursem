@@ -14,7 +14,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
 
-gem 'rswag-api', '~> 2.14'
+gem 'rswag-api', '~> 2.15'
 gem 'rswag-ui', '~> 2.14'
 
 group :development, :test do
