@@ -15,7 +15,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # gem "rack-cors"
 
 gem 'rswag-api', '~> 2.14'
-gem 'rswag-ui', '~> 2.14'
+gem 'rswag-ui', '~> 2.15'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
