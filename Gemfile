@@ -33,7 +33,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.1', '>= 6.1.4'
   gem 'faker', '~> 3.4', '>= 3.4.2'
 
-  gem 'rswag-specs', '~> 2.14'
+  gem 'rswag-specs', '~> 2.15'
 
   gem 'simplecov', '~> 0.22.0', require: false
 end
