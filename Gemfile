@@ -31,7 +31,7 @@ group :development, :test do
 
   gem 'rspec', '~> 3.13'
   gem 'rspec-rails', '~> 6.1', '>= 6.1.4'
-  gem 'faker', '~> 3.4', '>= 3.4.2'
+  gem 'faker', '~> 3.5'
 
   gem 'rswag-specs', '~> 2.14'
 
