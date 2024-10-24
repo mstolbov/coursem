@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails", "~> 7.2.1"
-gem 'pg', '~> 1.5', '>= 1.5.7'
+gem 'pg', '~> 1.5'
 gem 'puma', '~> 6.4', '>= 6.4.2'
 gem 'ransack', '~> 4.2', '>= 4.2.1'
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
