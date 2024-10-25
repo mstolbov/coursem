@@ -27,7 +27,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
+  gem 'factory_bot_rails', '~> 6.4'
 
   gem 'rspec', '~> 3.13'
   gem 'rspec-rails', '~> 6.1', '>= 6.1.4'
